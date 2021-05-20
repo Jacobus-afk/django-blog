@@ -20,6 +20,7 @@ from pathlib import Path
 
 config = {
         "SECRET_KEY": os.environ.get('SECRET_KEY'),
+        "DEBUG_VALUE": os.environ.get('DEBUG_VALUE'),
         "EMAIL_USER": os.environ.get('EMAIL_USER'),
         "EMAIL_PASS": os.environ.get('EMAIL_PASS'),
 		"AWS_ACCESS_KEY_ID": os.environ.get('AWS_ACCESS_KEY_ID'),
@@ -38,7 +39,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config['DEBUG_VALUE'] == 'True'
 
 ALLOWED_HOSTS = ['chango-unchained.herokuapp.com']
 
