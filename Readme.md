@@ -75,6 +75,12 @@
 * sudo chmod -R 775 `<django project>`/media
 * sudo touch /etc/config.json
 * `<secret key>`: python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+* or on console:
+```
+python
+import secrets
+secrets.token_hex(24)
+```
 * sudo nano /etc/config.json
 ```
 {
