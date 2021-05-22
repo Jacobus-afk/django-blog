@@ -14,7 +14,7 @@ import json
 import django_heroku
 from pathlib import Path
 
-with open('../config.json') as config_file:
+with open('/etc/config.json') as config_file:
     config = json.load(config_file)
 
 
@@ -41,7 +41,7 @@ SECRET_KEY = config['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config['DEBUG_VALUE'] == 'True'
 
-ALLOWED_HOSTS = ['chango-unchained.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -171,4 +171,4 @@ AWS_DEFAULT_ACL = None
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())

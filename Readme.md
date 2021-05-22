@@ -148,3 +148,11 @@ sudo apt-get install python-certbot-apache
 ```
 30 4 1 * * sudo certbot renew --quiet
 ```
+
+## local apache2 config with multiple python installed
+* activate venv
+* pip install mod_wsgi
+* mod_wsgi-express module-config
+* copy the LoadModule line
+* sudo nano /etc/apache2/mods-enabled/wsgi.load
+* comment out old LoadModule line and replace with copied one
