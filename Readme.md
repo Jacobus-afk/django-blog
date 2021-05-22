@@ -112,7 +112,7 @@ EMAIL_HOST_PASSWORD = config['EMAIL_PASS']
 ## ssh config 
 
 * ssh-keygen -b 4096
-* scp ~/.ssh/`<keyname>`.pub `<username>`@`<server ip>`:~/.ssh/authorized_keys
+* scp \~/.ssh/`<keyname>`.pub `<username>`@`<server ip>`:\~/.ssh/authorized_keys
 
 ## pushing project to server
 
