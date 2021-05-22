@@ -14,19 +14,19 @@ import json
 import django_heroku
 from pathlib import Path
 
-# with open('../../config.json') as config_file:
-#     config = json.load(config_file)
+with open('../config.json') as config_file:
+    config = json.load(config_file)
 
 
-config = {
-        "SECRET_KEY": os.environ.get('SECRET_KEY'),
-        "DEBUG_VALUE": os.environ.get('DEBUG_VALUE'),
-        "EMAIL_USER": os.environ.get('EMAIL_USER'),
-        "EMAIL_PASS": os.environ.get('EMAIL_PASS'),
-		"AWS_ACCESS_KEY_ID": os.environ.get('AWS_ACCESS_KEY_ID'),
-		"AWS_SECRET_ACCESS_KEY": os.environ.get('AWS_SECRET_ACCESS_KEY'),
-		"AWS_STORAGE_BUCKET_NAME": os.environ.get('AWS_STORAGE_BUCKET_NAME')
-}
+# config = {
+#         "SECRET_KEY": os.environ.get('SECRET_KEY'),
+#         "DEBUG_VALUE": os.environ.get('DEBUG_VALUE'),
+#         "EMAIL_USER": os.environ.get('EMAIL_USER'),
+#         "EMAIL_PASS": os.environ.get('EMAIL_PASS'),
+# 		"AWS_ACCESS_KEY_ID": os.environ.get('AWS_ACCESS_KEY_ID'),
+# 		"AWS_SECRET_ACCESS_KEY": os.environ.get('AWS_SECRET_ACCESS_KEY'),
+# 		"AWS_STORAGE_BUCKET_NAME": os.environ.get('AWS_STORAGE_BUCKET_NAME')
+# }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
