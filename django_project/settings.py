@@ -41,7 +41,7 @@ SECRET_KEY = config['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config['DEBUG_VALUE'] == 'True'
 
-ALLOWED_HOSTS = ['chango-unchained.herokuapp.com']
+ALLOWED_HOSTS = ['134.122.69.16']
 
 
 # Application definition
